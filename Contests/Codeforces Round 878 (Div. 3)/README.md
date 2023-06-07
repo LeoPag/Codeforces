@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Cipher Shifer            | Two Pointers                        |
 |  B | Binary Cafe              | Combinatorics, Math                     |
-|  C | Ski Resort        | Combinatoris, Two Pointers                    |
+|  C | Ski Resort        | Combinatorics, Two Pointers                    |
