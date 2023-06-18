@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Unit Array           | Math                   |
 |  B | Maximum Strength              |Greedy, Math                     |
-|  C | Ski Resort        | Combinatorics, Two Pointers                    |
+|  C | Game with Reversing        | Games                   |
