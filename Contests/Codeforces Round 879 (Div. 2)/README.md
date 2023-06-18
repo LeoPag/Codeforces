@@ -3,5 +3,5 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Unit Array           | Math                   |
-|  B | Binary Cafe              |Greedy, Math                     |
+|  B | Maximum Strength              |Greedy, Math                     |
 |  C | Ski Resort        | Combinatorics, Two Pointers                    |
