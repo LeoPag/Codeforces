@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Cipher Shifer            | Two Pointers                        |
+|  A | Unit Array           | Math                   |
 |  B | Binary Cafe              | Combinatorics, Math                     |
 |  C | Ski Resort        | Combinatorics, Two Pointers                    |
