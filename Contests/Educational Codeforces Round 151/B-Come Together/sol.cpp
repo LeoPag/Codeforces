@@ -26,9 +26,7 @@ void solve(){
    ans += min(abs(vertical_b),abs(vertical_c));
  }
  cout << ans + 1 << endl;
-
 }
-
 
 int main(){
   int t;cin >> t;

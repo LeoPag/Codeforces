@@ -12,58 +12,38 @@ string s,l,r;
 int m;
 
 typedef vector<int> VI;
-
-VI explored;
-
-bool compare(int m_idx, int number, int s_idx){
-
-  if(explored[m-m_idx] >= s_idx){
-    return true;
-  }
-
-  if(s_idx >= s.size()){
-    return false;
-  }
-
-  for(int i = s_idx; i < s.size(); i++){
-    if(s[i] == number){
-      if(m_idx == m-1){
-        explored[0] = i;
-        return true;
-      }
-      bool might_be = true;
-      for(int j = l[m_idx+1]; j <= r[m_idx+1]; j++){
-        might_be = might_be && compare(m_idx + 1, j,i+1);
-        if (might_be == false) return false;
-      }
-      explored[m - (m_idx+1)] = i+1;
-      return might_be;
-    }
-  }
-  return false;
-}
-
-
+typedef vector<VI> VVI;
 
 void solve(){
 
   cin >> s >> m >> l >> r;
 
-  explored = VI(m+1,-1);
+  int n = int(s.size());
 
-  bool is_not_possible = true;
+  VVI nxt(n+1,VI(10,n+1));
 
-  for(int k = l[0]; k <= r[0]; k++){
-    is_not_possible = is_not_possible && (compare(0,k,0));
-    if (is_not_possible == false) break;
+  for(int i = n-1; i >= 0; i--){
+    for(int c = 0; c < 10; c++){
+      nxt[i][c] = nxt[i+1][c];
+    }
+    nxt[i][s[i]-'0'] = i+1;
   }
 
-  if(is_not_possible){
-    cout << "NO" << endl;
+  int p = 0;
+
+  for(int j = 0; j < m; j++){
+    int q = -1;
+    for(int k = l[j]; k <= r[j]; k++){
+      q = max(q,nxt[p][k -'0']);
+    }
+    p = q;
+    if(p == n+1){
+      cout << "YES" << endl;
+      return;
+    }
   }
-  else{
-    cout << "YES" << endl;
-  }
+
+  cout << "NO" << endl;
 }
 
 
