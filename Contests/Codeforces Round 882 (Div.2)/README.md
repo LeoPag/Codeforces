@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Sasha and Array Coloring         | Greedy, Sortings                      |
-|  B | Long Long            | Greedy                    |
-|  C | Sum in Binary Tree           | Math, Trees                    |
+|  A | The Man who Became a God         | Greedy, Sortings                      |
+|  B | Hamon Odyssey            | Bitmasks, Greedy                   |
+|  C | Vampiric Powers, anyone?           | Bitmasks, Dynamic Programming, Brute Force                   |
 
