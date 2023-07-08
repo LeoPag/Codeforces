@@ -3,6 +3,7 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Rudolph and Cut the Rope         | Math                      |
-|  B | Long Long            | Greedy                    |
-|  C | Sum in Binary Tree           | Math, Trees                    |
-|  D | Apple Tree           | Combinatorics, DFS, Trees                    |
+|  B | Rudolph and Tic-Tac-Toe             | Brute Force                   |
+|  C | Rudolph and the Another Competition           | Greedy                   |
+|  D | Rudolph and Christmas Tree           | Math, Geometry                   |
+|  E1 | Rudolph and the Snowflakes          | Math, Brute Force                   |
