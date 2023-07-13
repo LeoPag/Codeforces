@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Grasshopper on a Line                | Math                        |
-|  B | Comparison String| Greedy                |
-|  C | Best Binary String | Greedy                |
+|  A | Subtraction Game               | Math                        |
+|  B | Permutation Primes| Greedy                |
+|  C | Particles | Greedy                |
