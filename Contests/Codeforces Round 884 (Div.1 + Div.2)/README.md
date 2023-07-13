@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Subtraction Game               | Math                        |
-|  B | Permutation Primes| Greedy                |
-|  C | Particles | Greedy                |
+|  A | Subtraction Game               | Games                        |
+|  B | Permutation Primes| Greedy, Math                |
+|  C | Particles | Dynamic Programming, Greedy, Math                |
