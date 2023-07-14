@@ -19,9 +19,9 @@
 #include <stack>
 #include <iomanip>
 #include <fstream>
-
+   
 using namespace std;
-
+   
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> PI;
@@ -37,10 +37,37 @@ typedef vector<PI> VPI;
 ll MOD = 998244353;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define sort(v) sort(v.begin(),v.end())
-#define f(start,i,end) for(int i = start; i < end; i++) 
-
+  
 void solve(){
+    
+    int n; cin >> n;
+    ll x; cin >> x;
+    ll c =  ~x;
+    ll curr = 0;
+
+    VL ai(n);
+    VL bi(n);
+    VL ci(n);
+
+    for(int i = 0; i < n; i++) cin >> ai[i];
+    for(int i = 0; i < n; i++) cin >> bi[i];
+    for(int i = 0; i < n; i++) cin >> ci[i];
+
+    for(int i = 0; i < n; i++){
+        if(((curr | ai[i]) & c) == 0) curr = curr | ai[i];  
+        else break;
+    }
+    for(int i = 0; i < n; i++){
+        if(((curr | bi[i]) & c) == 0) curr = curr | bi[i];
+        else break;
+    }
+    for(int i = 0; i < n; i++){
+        if(((curr | ci[i]) & c) == 0) curr = curr | ci[i];
+        else break;
+    }
+
+    if(curr == x) cout << "Yes" << endl;
+    else cout << "No" << endl;
 
 }
 int main()

@@ -19,9 +19,9 @@
 #include <stack>
 #include <iomanip>
 #include <fstream>
-
+   
 using namespace std;
-
+   
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> PI;
@@ -37,11 +37,23 @@ typedef vector<PI> VPI;
 ll MOD = 998244353;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define sort(v) sort(v.begin(),v.end())
-#define f(start,i,end) for(int i = start; i < end; i++) 
 
 void solve(){
+    
+    int n; cin >> n;
 
+    VI ai(n+1);
+    for(int i = 1; i <= n; i++) cin >> ai[i];
+
+    VI dp(n+1,0);
+    VI mx(n+1,-1000000);
+
+    for(int i = 1; i <= n; i++){
+        dp[i] = max(dp[i-1], mx[ai[i]] + i + 1);
+        mx[ai[i]] = max(mx[ai[i]], dp[i-1]-i);
+    }
+
+    cout << dp[n] << endl;
 }
 int main()
 {
