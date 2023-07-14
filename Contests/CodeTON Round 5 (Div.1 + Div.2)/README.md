@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Twin Permutations              | Math                        |
+|  A | Tenzing and Tzondu              | Math, Games                        |
 |  B | Array merging                  |Greedy                        |
 |  C | Copil Copac Draws Trees        | DFS, DP,Graphs,Trees                        |
