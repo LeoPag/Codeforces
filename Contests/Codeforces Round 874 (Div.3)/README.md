@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Musical Puzzle             | Strings                        |
 |  B | Restore the Weather              |Greedy, Sortings                        |
-|  C | Copil Copac Draws Trees        | DFS, DP,Graphs,Trees                        |
+|  C | Vlad Building Beautiful Array        | Greedy, Math                        |
