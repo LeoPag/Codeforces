@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Twin Permutations              | Math                        |
-|  B | Array merging                  |Greedy                        |
+|  A | Musical Puzzle             | Strings                        |
+|  B |                |Greedy                        |
 |  C | Copil Copac Draws Trees        | DFS, DP,Graphs,Trees                        |
