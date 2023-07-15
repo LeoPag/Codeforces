@@ -38,61 +38,29 @@ ll MOD = pow(10,9) + 7;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define sort(v) sort(v.begin(),v.end())
-#define f(start,i,end) for(int i = start; i < end; i++) 
+#define f(start,i,end) for(int i = start; i < end; i++)
 
-// C++ function for extended Euclidean Algorithm
-ll gcdExtended(ll a, ll b, ll *x, ll *y);
- 
-// Function to find modulo inverse of b. It returns
-// -1 when inverse doesn't
-ll modInverse(ll b, ll m)
-{
-    ll x, y; // used in extended GCD algorithm
-    ll g = gcdExtended(b, m, &x, &y);
- 
-    // Return -1 if b and m are not co-prime
-    if (g != 1)
-        return -1;
- 
-    // m is added to handle negative x
-    return (x%m + m) % m;
+// MODULAR DIVISION
+ll get_pow_mod(ll n, ll x){
+    ll ret = 1;
+    while(x){
+      if(x&1)
+       (ret*=n)%=MOD;
+      x>>=1;
+      (n*=n)%=MOD;
+     }
+     return ret;
 }
- 
-// Function to compute a/b under modulo m
-ll modDivide(ll a, ll b, ll m)
-{
-    a = a % m;
-    ll inv = modInverse(b, m);
-    if (inv == -1){
-       cout << "Division not defined";
-       return -1;
-    }
-    else return  (inv * a) % m;
+ll get_mod_inverse(ll b){
+    return get_pow_mod(b,MOD-2);
 }
- 
-// C function for extended Euclidean Algorithm (used to
-// find modular inverse.
-ll gcdExtended(ll a, ll b, ll *x, ll *y)
-{
-    // Base Case
-    if (a == 0)
-    {
-        *x = 0, *y = 1;
-        return b;
-    }
- 
-    ll x1, y1; // To store results of recursive call
-    ll gcd = gcdExtended(b%a, a, &x1, &y1);
- 
-    // Update x and y using results of recursive
-    // call
-    *x = y1 - (b/a) * x1;
-    *y = x1;
- 
-    return gcd;
+ll modDivide(ll a, ll b){
+    ll inverse = get_mod_inverse(b);
+    return a % MOD * inverse % MOD;
 }
 
 
+// SOLVE
 void solve(){
     int n,m; cin >> n >> m;
     VL levels(n);
@@ -113,31 +81,27 @@ void solve(){
 
         if(freq[levels[end]] == 0) unique += 1;
         freq[levels[end]] += 1;
-        if(freq[levels[end]] > 1) valid_combinations = modDivide((valid_combinations % MOD) * (freq[levels[end]]),(freq[levels[end]] - 1),MOD);
+        if(freq[levels[end]] > 1) valid_combinations = modDivide((valid_combinations % MOD) * (freq[levels[end]]),(freq[levels[end]] - 1));
 
-        //cout << "ANALYS: " << end << " " << valid_combinations << endl;
-        
+
         while (levels[end] - levels[start] >= m){
-            //cout << "In" << endl;
             if(freq[levels[start]] == 1) unique -= 1;
-            if(freq[levels[start]] > 1) valid_combinations = modDivide((valid_combinations % MOD) * (freq[levels[start]]-1), (freq[levels[start]]), MOD);
+            if(freq[levels[start]] > 1) valid_combinations = modDivide((valid_combinations % MOD) * (freq[levels[start]]-1), (freq[levels[start]]));
             freq[levels[start]]--;
             start += 1;
         }
 
-        //cout << start << " "<< end <<" "<< unique << endl;
 
         if(unique == m) {
-            ll extra = modDivide(valid_combinations, freq[levels[end]], MOD);
+            ll extra = modDivide(valid_combinations, freq[levels[end]]);
             tot += extra;
             tot = tot % MOD;
-            //cout << "END: " << start << " " << end << " " << extra << " " << tot << endl;
         }
         end += 1;
     }
 
     cout << tot % MOD << endl;
-   
+
 }
 int main()
 {
@@ -145,7 +109,6 @@ int main()
     ll t;
     cin >> t;
     for(int it=1;it<=t;it++) {
-        //cout << "TESTCASE: " << it << endl;
         solve();
     }
     return 0;

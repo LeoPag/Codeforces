@@ -38,7 +38,25 @@ ll MOD = 998244353;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define sort(v) sort(v.begin(),v.end())
-#define f(start,i,end) for(int i = start; i < end; i++) 
+#define f(start,i,end) for(int i = start; i < end; i++)
+// MODULAR DIVISION
+ll get_pow_mod(ll n, ll x){
+    ll ret = 1;
+    while(x){
+      if(x&1)
+       (ret*=n)%=MOD;
+      x>>=1;
+      (n*=n)%=MOD;
+     }
+     return ret;
+}
+ll get_mod_inverse(ll b){
+    return get_pow_mod(b,MOD-2);
+}
+ll modDivide(ll a, ll b){
+    ll inverse = get_mod_inverse(b);
+    return a % MOD * inverse % MOD;
+}
 
 void solve(){
 
