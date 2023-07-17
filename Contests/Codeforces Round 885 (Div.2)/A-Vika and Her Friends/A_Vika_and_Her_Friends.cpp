@@ -61,6 +61,20 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+    int n,m,k; cin >> n >> m >> k;
+    int x_v,y_v; cin >> x_v >> y_v;
+
+    bool caught = false;
+    f(0,i,k){
+        int x_k, y_k; cin >> x_k >> y_k;
+
+        if((abs(x_k - x_v) + abs(y_k-y_v)) % 2 == 0) caught = true;
+    
+    }
+
+    if(caught) cout << "NO" << endl;
+    else cout << "YES" << endl;
+
 }
 int main()
 {
@@ -68,7 +82,6 @@ int main()
     ll t;
     cin >> t;
     for(int it=1;it<=t;it++) {
-        //cout<< "TESTCASE:  " <<  it << endl;
         solve();
     }
     return 0;

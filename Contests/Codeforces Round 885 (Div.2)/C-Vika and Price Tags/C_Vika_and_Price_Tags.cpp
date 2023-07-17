@@ -61,6 +61,46 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+    int n; cin >> n;
+    VL as(n);
+    VL bs(n);
+
+    f(0,i,n) cin >> as[i];
+    f(0,i,n) cin >> bs[i];
+
+    ll ref = -1;
+
+    f(0,i,n){
+
+        ll count = 1;
+        ll a = as[i];
+        ll b = bs[i];
+
+        if ((a == 0) & (b == 0)) continue;
+
+        while (a != 0){
+            b = b%(2*a);
+            ll c = llabs(a-b);
+            a = b;
+            b = c;
+            count += 1;
+
+        }
+
+        if(ref == -1){
+            ref = count % 3;
+            continue;
+        }
+
+        else if(count % 3 != ref){
+            cout << "NO" << endl;
+            return;
+        }
+    }
+
+    cout << "YES" << endl;
+
+
 }
 int main()
 {

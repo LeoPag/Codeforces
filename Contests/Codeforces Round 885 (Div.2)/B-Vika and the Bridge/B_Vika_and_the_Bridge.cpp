@@ -61,6 +61,42 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+   int n,k; cin >> n >> k;
+
+   VVI steps(k+1);
+
+   f(1,i,n+1){
+
+        int ci; cin >> ci;
+        steps[ci].push_back(i);
+   }
+
+   f(1,i,k+1){
+    steps[i].push_back(n+1);
+   }
+
+   int res = 10000000;
+
+   f(1,i,k+1){
+    
+      int max1 = steps[i][0] - 1;
+      int max2 = -1;
+      f(1,j,steps[i].size()){
+        if(steps[i][j] - steps[i][j-1] - 1 >= max1){
+            max2 = max1;
+            max1 = steps[i][j] - steps[i][j-1] - 1;
+        }
+
+        else if((max2 == -1) or (steps[i][j] - steps[i][j-1] - 1 > max2)){
+            max2 = steps[i][j] - steps[i][j-1] - 1;
+        }
+      }
+      int max_step = max((max1 / 2), max2);
+      res = min(res,max_step);
+   }
+
+   cout << res << endl;
+
 }
 int main()
 {
