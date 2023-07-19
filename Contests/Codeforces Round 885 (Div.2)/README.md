@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Tenzing and Tzondu              | Math, Games                        |
-|  B | Tenzing and Books                 |BitMask, Greedy, Math                        |
-|  C | Tenzing and Balls         |Dynamic Programming                     |
+|  A | Vika and Her Friends              | Math, Games                        |
+|  B | Vika and the Bridge              | Greedy, Math                        |
+|  C | Vika and Price Tags         |Math, Number Theory                     |
