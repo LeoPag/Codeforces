@@ -39,6 +39,8 @@ double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define sort(v) sort(v.begin(),v.end())
 #define f(start,i,end) for(int i = start; i < end; i++)
+#define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
+#define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
