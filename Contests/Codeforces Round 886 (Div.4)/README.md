@@ -9,3 +9,4 @@
 |  E | Cardboard for Pictures        |Geometry, Math              |
 |  G | We Were Both Children      |Brute Force, Math, Number Theory            |
 |  F | The Morning Star      |Geometry, Hashing           |
+|  H | The Third Letter     |Graphs, DFS          |

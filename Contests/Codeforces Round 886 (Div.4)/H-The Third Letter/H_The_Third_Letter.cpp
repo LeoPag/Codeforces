@@ -19,7 +19,6 @@
 #include <stack>
 #include <iomanip>
 #include <fstream>
-#include <tuple>
 
 using namespace std;
 
@@ -35,7 +34,6 @@ typedef vector<vector<ll> > VVL;
 typedef vector<vector<PL> > VVPL;
 typedef vector<PL> VPL;
 typedef vector<PI> VPI;
-
 ll MOD = 998244353;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -43,6 +41,8 @@ double eps = 1e-12;
 #define f(start,i,end) for(int i = start; i < end; i++)
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
+#define max(v) *max_element(v.begin(), v.end())
+#define print(var) cout << var << endl
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -62,41 +62,47 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
-bool sortbyCond(const pair<int, int>& a,
-                const pair<int, int>& b)
-{
-    if (a.first != b.first)
-        return (a.first < b.first);
-    else
-       return (a.second > b.second);
+bool is_pos;
+
+
+void dfs(int node, VL& coords, VI& explored, VVPL& adj_list, ll new_coord){
+    if(explored[node] == 1){
+        if(coords[node] != new_coord) is_pos = false;
+        return;
+    }
+    explored[node] = 1;
+    coords[node] = new_coord;
+    for(auto it = adj_list[node].begin(); it != adj_list[node].end(); it++){
+        int next_node = it->first;
+        ll next_coord = new_coord + it->second;
+        dfs(next_node, coords, explored, adj_list, next_coord);
+    }
 }
+
+
 
 // SOLVE
 void solve(){
-   ll n,k; cin >> n >> k;
 
-   VL A(n);
-   f(0,i,n) cin >> A[i];
-   sort(A);
+    is_pos = true;
+    int n,m; cin >> n >> m;
+    VVPL adj_list(n+1);
+    f(0,i,m){
+        int ai,bi; cin >> ai >> bi;
+        ll di; cin >> di;
+        adj_list[ai].push_back(make_pair(bi,-di));
+        adj_list[bi].push_back(make_pair(ai,di));
+    }
 
-   ll best = 0;
-   ll curr = 1;
+    VL coords(n+1,0);
+    VI explored(n+1,0);
 
-   f(1,i,n){
+    f(1,i,n+1){
+        if(explored[i] == 0) dfs(i,coords,explored, adj_list, 0);
+    }
 
-        if(A[i] - A[i-1] > k){
-            best = max(best,curr);
-            curr = 1;
-        }
-        else{
-            curr += 1;
-        }
-   }
-
-   best = max(best,curr);
-
-   cout << n-best << endl;
-
+    if(is_pos) print("YES");
+    else print("NO");
 }
 int main()
 {
