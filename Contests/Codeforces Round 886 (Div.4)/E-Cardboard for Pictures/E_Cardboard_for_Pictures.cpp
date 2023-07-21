@@ -34,6 +34,9 @@ typedef vector<vector<ll> > VVL;
 typedef vector<vector<PL> > VVPL;
 typedef vector<PL> VPL;
 typedef vector<PI> VPI;
+typedef vector<char> VC;
+typedef vector<VC> VVC;
+
 ll MOD = 998244353;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -41,8 +44,6 @@ double eps = 1e-12;
 #define f(start,i,end) for(int i = start; i < end; i++)
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
-#define max(v) *max_element(v.begin(), v.end())
-#define print(var) cout << var << endl;
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -62,8 +63,55 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+
+long long int find_root(long long int rad){
+    unsigned long long int start = 0;
+    unsigned long long int end = pow(10,12);
+
+    while(start <= end){
+
+        cout << start << " " << end << endl;
+        unsigned long long int mid = (start + end) / 2;
+        unsigned long long int sq_mid = mid * mid;
+        if(sq_mid == rad) return mid;
+        else if(sq_mid > rad) end = mid -1;
+        else start = mid + 1;
+    }
+
+    return 0;
+}
+
 // SOLVE
 void solve(){
+
+int n; cin >> n;
+ll c; cin >> c;
+
+ll sum_sq = 0;
+ll sum_i = 0;
+
+f(0,i,n){
+    ll si; cin >> si;
+    sum_sq += si*si;
+    sum_i += si;
+}
+
+//cout << sum_i << " " << sum_sq << endl;
+
+ll coeff = c - sum_sq;
+coeff = coeff / (4*n);
+ll a = 4;
+ll b = (sum_i) / (2*n);
+
+//cout << a <<" " << b << " " << coeff << endl;
+
+ll rooted =  sqrtl(b*b+coeff);
+//cout << rooted << endl;
+ll w = rooted - b;
+
+cout << w << endl;
+
+
 
 }
 int main()

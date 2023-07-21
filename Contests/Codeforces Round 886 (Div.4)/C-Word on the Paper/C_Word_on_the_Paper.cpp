@@ -34,6 +34,9 @@ typedef vector<vector<ll> > VVL;
 typedef vector<vector<PL> > VVPL;
 typedef vector<PL> VPL;
 typedef vector<PI> VPI;
+typedef vector<char> VC;
+typedef vector<VC> VVC;
+
 ll MOD = 998244353;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -41,8 +44,6 @@ double eps = 1e-12;
 #define f(start,i,end) for(int i = start; i < end; i++)
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
-#define max(v) *max_element(v.begin(), v.end())
-#define print(var) cout << var << endl;
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -64,6 +65,27 @@ ll modDivide(ll a, ll b){
 
 // SOLVE
 void solve(){
+    VVC mat(8);
+    f(0,i,8){
+        f(0,j,8){
+            char ij; cin >> ij;
+            mat[i].push_back(ij);
+        }
+        
+    }
+
+    string w;
+
+    f(0,j,8){
+        f(0,i,8){
+            if (mat[i][j] != '.'){
+                w.push_back(mat[i][j]);
+            } 
+
+        }
+
+    }
+    cout << w << endl;
 
 }
 int main()

@@ -41,8 +41,6 @@ double eps = 1e-12;
 #define f(start,i,end) for(int i = start; i < end; i++)
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
-#define max(v) *max_element(v.begin(), v.end())
-#define print(var) cout << var << endl;
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -64,6 +62,11 @@ ll modDivide(ll a, ll b){
 
 // SOLVE
 void solve(){
+    VI dig(3);
+    f(0,i,3) cin >> dig[i];
+    sort(dig);
+    if(dig[2] + dig[1] >= 10) cout << "YES" << endl;
+    else cout << "NO" << endl;
 
 }
 int main()
