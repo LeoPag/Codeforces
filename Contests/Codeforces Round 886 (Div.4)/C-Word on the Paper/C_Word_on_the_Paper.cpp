@@ -71,7 +71,7 @@ void solve(){
             char ij; cin >> ij;
             mat[i].push_back(ij);
         }
-        
+
     }
 
     string w;
@@ -80,10 +80,8 @@ void solve(){
         f(0,i,8){
             if (mat[i][j] != '.'){
                 w.push_back(mat[i][j]);
-            } 
-
+            }
         }
-
     }
     cout << w << endl;
 

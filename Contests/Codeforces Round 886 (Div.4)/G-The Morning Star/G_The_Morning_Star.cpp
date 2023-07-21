@@ -65,25 +65,6 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
-
-long long int find_root(long long int rad){
-    unsigned long long int start = 0;
-    unsigned long long int end = pow(10,12);
-
-    while(start <= end){
-
-        cout << start << " " << end << endl;
-        unsigned long long int mid = (start + end) / 2;
-        unsigned long long int sq_mid = mid * mid;
-        if(sq_mid == rad) return mid;
-        else if(sq_mid > rad) end = mid -1;
-        else start = mid + 1;
-    }
-
-    return 0;
-}
-
-
 map <PL,ll> c;
 // SOLVE
 void solve(){
@@ -106,10 +87,8 @@ void solve(){
 
     }
     print(res);
-    
-
-
 }
+
 int main()
 {
     fast_cin();

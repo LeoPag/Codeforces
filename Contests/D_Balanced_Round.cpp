@@ -19,6 +19,7 @@
 #include <stack>
 #include <iomanip>
 #include <fstream>
+#include <tuple>
 
 using namespace std;
 
@@ -34,8 +35,6 @@ typedef vector<vector<ll> > VVL;
 typedef vector<vector<PL> > VVPL;
 typedef vector<PL> VPL;
 typedef vector<PI> VPI;
-typedef vector<char> VC;
-typedef vector<VC> VVC;
 
 ll MOD = 998244353;
 double eps = 1e-12;
@@ -44,7 +43,6 @@ double eps = 1e-12;
 #define f(start,i,end) for(int i = start; i < end; i++)
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
-#define max(v) *max_element(v.begin(), v.end())
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -64,31 +62,40 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+bool sortbyCond(const pair<int, int>& a,
+                const pair<int, int>& b)
+{
+    if (a.first != b.first)
+        return (a.first < b.first);
+    else
+       return (a.second > b.second);
+}
 
-map<ll,ll> occ;
 // SOLVE
 void solve(){
+   ll n,k; cin >> n >> k;
 
-    occ.clear();
+   VL A(n);
+   f(0,i,n) cin >> A[i];
+   sort(A);
 
-    ll n; cin >> n;
-    VL tot(n+1,0);
+   ll best = 0;
+   ll curr = 1;
 
+   f(1,i,n){
 
-    f(0,i,n){
-        ll ai; cin >> ai;
-        if(ai <= n){
-            occ[ai] += 1;
+        if(A[i] - A[i-1] > k){
+            best = max(best,curr);
+            curr = 1;
         }
-    }
-
-    f(1,i,n+1){
-        if(occ[i] == 0) continue;
-        for(ll j = i; j <= n; j+=i){
-            tot[j] += occ[i];
+        else{
+            curr += 1;
         }
-    }
-    cout << max(tot) << endl;
+   }
+
+   best = max(best,curr);
+
+   cout << n-best << endl;
 
 }
 int main()

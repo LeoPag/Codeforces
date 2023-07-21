@@ -77,7 +77,7 @@ void solve(){
 
    int best = -1;
    int besti = 0;
-   
+
    f(1,i,n+1){
     int ai,bi; cin >> ai >> bi;
     if((ai <= 10) & (bi > besti)){
@@ -88,7 +88,7 @@ void solve(){
 
    cout << best << endl;
 
-   
+
 }
 int main()
 {

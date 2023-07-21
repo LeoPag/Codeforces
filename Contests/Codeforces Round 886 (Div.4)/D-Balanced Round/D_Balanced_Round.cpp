@@ -96,13 +96,6 @@ void solve(){
    best = max(best,curr);
 
    cout << n-best << endl;
-
-
-
-
-
-
-   
 }
 int main()
 {

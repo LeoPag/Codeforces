@@ -64,23 +64,6 @@ ll modDivide(ll a, ll b){
 }
 
 
-long long int find_root(long long int rad){
-    unsigned long long int start = 0;
-    unsigned long long int end = pow(10,12);
-
-    while(start <= end){
-
-        cout << start << " " << end << endl;
-        unsigned long long int mid = (start + end) / 2;
-        unsigned long long int sq_mid = mid * mid;
-        if(sq_mid == rad) return mid;
-        else if(sq_mid > rad) end = mid -1;
-        else start = mid + 1;
-    }
-
-    return 0;
-}
-
 // SOLVE
 void solve(){
 
@@ -96,23 +79,16 @@ f(0,i,n){
     sum_i += si;
 }
 
-//cout << sum_i << " " << sum_sq << endl;
 
 ll coeff = c - sum_sq;
 coeff = coeff / (4*n);
 ll a = 4;
 ll b = (sum_i) / (2*n);
 
-//cout << a <<" " << b << " " << coeff << endl;
-
 ll rooted =  sqrtl(b*b+coeff);
-//cout << rooted << endl;
 ll w = rooted - b;
 
 cout << w << endl;
-
-
-
 }
 int main()
 {
