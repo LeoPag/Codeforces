@@ -62,8 +62,61 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+
+ll compute_fib(ll k){
+    if(k == 1) return 0;
+    if(k == 2) return 1;
+
+    ll prec1 = 0;
+    ll prec2 = 1;
+    ll fib = 0;
+
+    f(0,i,k-2){
+        fib = prec1 + prec2;
+        prec1 = prec2;
+        prec2 = fib;
+    } 
+    return fib;
+}
+
+
+
 // SOLVE
 void solve(){
+
+    int n; cin >> n;
+    ll k; cin >> k;
+
+    if(k > n+10){
+        if(n == 0) print(1);
+        else print(0);
+        return;
+    }
+
+    ll kth_fact = compute_fib(k);
+    ll kth_fact_prev = compute_fib(k-1);
+
+    //cout << kth_fact_prev << " " << kth_fact << endl;
+
+    //return;
+
+    ll res = 0;
+
+    f(0,a,n/2 + 10){
+
+        if(n - kth_fact_prev*a < 0) break;
+
+        ll b = (n - kth_fact_prev*a) / kth_fact;
+        ll rem = (n - kth_fact_prev*a) % kth_fact;
+
+        //cout << a << " "<< b <<" "<< rem << endl;
+
+        if((b >= a) & (rem == 0)){
+            res += 1;
+        }
+    }
+
+    print(res);
 
 }
 int main()

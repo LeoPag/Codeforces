@@ -64,6 +64,19 @@ ll modDivide(ll a, ll b){
 
 // SOLVE
 void solve(){
+    int n; cin >> n;
+
+    ll max_d = pow(10,10);
+
+    ll prev; cin >> prev;
+    f(1,i,n){
+        ll curr; cin >> curr;
+        max_d = min(max_d,curr - prev);
+        prev = curr;
+    }
+
+    if(max_d < 0) print(0);
+    else print(max_d / 2 + 1);
 
 }
 int main()

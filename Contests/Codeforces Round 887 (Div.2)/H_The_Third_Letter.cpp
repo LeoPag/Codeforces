@@ -62,9 +62,47 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+bool is_pos;
+
+
+void dfs(int node, VL& coords, VI& explored, VVPL& adj_list, ll new_coord){
+    if(explored[node] == 1){
+        if(coords[node] != new_coord) is_pos = false;
+        return;
+    }
+    explored[node] = 1;
+    coords[node] = new_coord;
+    for(auto it = adj_list[node].begin(); it != adj_list[node].end(); it++){
+        int next_node = it->first;
+        ll next_coord = new_coord + it->second;
+        dfs(next_node, coords, explored, adj_list, next_coord);
+    }
+}
+
+
+
 // SOLVE
 void solve(){
 
+    is_pos = true;
+    int n,m; cin >> n >> m;
+    VVPL adj_list(n+1);
+    f(0,i,m){
+        int ai,bi; cin >> ai >> bi;
+        ll di; cin >> di;
+        adj_list[ai].push_back(make_pair(bi,-di));
+        adj_list[bi].push_back(make_pair(ai,di));
+    }
+
+    VL coords(n+1,0);
+    VI explored(n+1,0);
+
+    f(1,i,n+1){
+        if(explored[i] == 0) dfs(i,coords,explored, adj_list, 0);
+    }
+
+    if(is_pos) print("YES");
+    else print("NO");
 }
 int main()
 {
