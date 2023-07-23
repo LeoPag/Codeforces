@@ -71,9 +71,7 @@ void solve(){
             char ij; cin >> ij;
             mat[i].push_back(ij);
         }
-
     }
-
     string w;
 
     f(0,j,8){
@@ -84,7 +82,6 @@ void solve(){
         }
     }
     cout << w << endl;
-
 }
 int main()
 {
