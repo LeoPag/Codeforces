@@ -75,7 +75,7 @@ ll compute_fib(ll k){
         fib = prec1 + prec2;
         prec1 = prec2;
         prec2 = fib;
-    } 
+    }
     return fib;
 }
 
@@ -96,10 +96,6 @@ void solve(){
     ll kth_fact = compute_fib(k);
     ll kth_fact_prev = compute_fib(k-1);
 
-    //cout << kth_fact_prev << " " << kth_fact << endl;
-
-    //return;
-
     ll res = 0;
 
     f(0,a,n/2 + 10){
@@ -108,8 +104,6 @@ void solve(){
 
         ll b = (n - kth_fact_prev*a) / kth_fact;
         ll rem = (n - kth_fact_prev*a) % kth_fact;
-
-        //cout << a << " "<< b <<" "<< rem << endl;
 
         if((b >= a) & (rem == 0)){
             res += 1;
