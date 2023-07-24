@@ -66,6 +66,35 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+    int n,k; cin >> n >> k;
+
+    VL a(n);
+    f(0,i,n) cin >> a[i];
+
+    if(a[0] > 1){
+        print(1);
+        return;
+    }
+
+    ll ans = 1;
+    int idx_a = 1;
+    int add = 1;
+
+
+
+
+    f(0,i,k){
+
+        while((idx_a < n) & (ans + add >= a[idx_a])){
+            add += 1;
+            idx_a += 1;
+        }
+        ans += add;
+        //cout << "TURN " << i+1 << ": " << ans << endl;
+    }
+
+    print(ans);
+
 }
 int main()
 {

@@ -42,7 +42,6 @@ double eps = 1e-12;
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
 #define max_arr(v) *max_element(v.begin(), v.end())
-#define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
@@ -65,6 +64,42 @@ ll modDivide(ll a, ll b){
 
 // SOLVE
 void solve(){
+
+    ll n,k; cin >> n >> k;
+
+    VL arr(n);
+    f(0,i,n) cin >> arr[i];
+
+    if (arr[0] != 1) {
+        print(1);
+        return;
+    }
+
+    ll low = 1;
+    ll high = n*k + 1;
+    ll best = low;
+
+    while(low <= high){
+        ll mid  = (low + high) / 2;
+        ll rem = mid;
+        ll point = n-1;
+        ll k_star = 0;
+        while (rem > 0){
+            while(arr[point] > rem) point--;
+            ll turns = 1 + (rem - arr[point]) / (point+1);
+            k_star += turns;
+            rem -= (point + 1) * turns;
+        }
+
+        if(k_star == k){
+            best = max(best,mid);
+            low = mid + 1;
+        }
+        else if (k_star > k) high = mid-1;
+        else low = mid+1;
+    }
+
+    print(best + 1);
 
 }
 int main()
