@@ -45,7 +45,6 @@ double eps = 1e-12;
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
-#define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -68,6 +67,50 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+    int n; cin >> n;
+    VL a(n-1);
+    f(0,i,n-1) cin >> a[i];
+
+    VI differences(n+1,0);
+
+    ll big_diff = -1;
+    if(a[0] <= n) differences[a[0]] = 1;
+    else big_diff = a[0];
+
+    f(1,i,n-1){
+        ll diff = a[i] - a[i-1];
+        if(diff > n){
+            if(big_diff == -1) big_diff = diff;
+            else{
+                print("NO");
+                return;
+            }
+        }
+
+        else if (differences[diff] == 1){
+            if(big_diff == -1) big_diff = diff;
+            else{
+                print("NO");
+                return;
+            }
+        }
+        else differences[diff] = 1;
+    }
+
+    if(big_diff == -1){
+      print("YES");
+      return;
+    }
+  
+    int count = 0;
+
+    f(1,j,n+1){
+        if(differences[j] == 0) big_diff -= j;
+    }
+ 
+    if(big_diff == 0) print("YES");
+    else print("NO");
+
 }
 int main()
 {
@@ -77,7 +120,7 @@ int main()
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
         solve();
-        //if(it == 2) return 0;
+        //if(it == 9) return 0;
     }
     return 0;
 }

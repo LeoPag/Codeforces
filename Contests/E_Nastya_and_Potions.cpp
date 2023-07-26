@@ -65,9 +65,65 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+VL coins;
+VL ans;
+VI unlimited;
+
+ll dfs(int node, VVI& neighs){
+
+    if(ans[node] != -1) return ans[node];
+    if(unlimited[node] == 1) {
+        ans[node] = 0;
+        return 0;
+    }
+    if(neighs[node].size() == 0){
+        ans[node] = coins[node];
+        return ans[node];
+    }
+
+    ll sum  = 0;
+
+    for(int neigh = 0; neigh < neighs[node].size(); neigh++){
+        sum += dfs(neighs[node][neigh], neighs);
+    }
+
+    ans[node] = min(coins[node],sum);
+
+    return ans[node];
+
+}
+
+
 // SOLVE
 void solve(){
 
+    int n,k; cin >> n >> k;
+    coins = VL(n+1,0);
+    ans = VL(n+1,-1);
+    f(1,i,n+1) cin >> coins[i];
+
+    unlimited = VI(n+1,0);
+    f(0,i,k){
+        int idx; cin>>idx;
+        unlimited[idx] = 1;
+    }
+
+    VVI neighs(n+1);
+    
+    f(1,i,n+1){
+        int m; cin >> m;
+        f(0,j,m){
+            int pot; cin >> pot;
+            neighs[i].push_back(pot);
+        }
+    }
+    f(1,i,n+1){
+        dfs(i,neighs);
+    }
+    f(1,i,n+1){
+        cout << ans[i] << " ";
+    }
+    cout << endl;
 }
 int main()
 {
@@ -77,7 +133,6 @@ int main()
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
         solve();
-        //if(it == 2) return 0;
     }
     return 0;
 }

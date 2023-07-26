@@ -45,7 +45,6 @@ double eps = 1e-12;
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
-#define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -65,9 +64,74 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+VL coins;
+VL ans;
+VI unlimited;
+
+ll dfs(int node, VVI& neighs){
+
+    if(ans[node] != -1) return ans[node];
+    if(unlimited[node] == 1) {
+        ans[node] = 0;
+        return 0;
+    }
+    if(neighs[node].size() == 0){
+        ans[node] = coins[node];
+        return ans[node];
+    }
+
+    ll sum  = 0;
+
+    for(int neigh = 0; neigh < neighs[node].size(); neigh++){
+        sum += dfs(neighs[node][neigh], neighs);
+    }
+
+    ans[node] = min(coins[node],sum);
+
+    return ans[node];
+
+}
+
+ll dfs(int node, int target, ll cost){
+
+    if(node == target) return cost;
+    if(visited[node] == 1) return;
+    else{
+        for()
+    }
+
+}
 // SOLVE
 void solve(){
 
+    int n, m; cin >> n >> m;
+    
+    VL mou(n+1);
+    f(1,i,n+1) cin >> mou[i];
+
+    map<PI,int> MPI m;
+    map<PI,ll> MPI z;
+
+
+    VVI adj_list(n+1);
+
+    f(0,i,m){
+        int u,v; cin >> u >> v;
+        adj_list[u].push_back(v);
+        adj_list[v].push_back(u);
+    }
+
+    int q; 
+
+    f(0,i,q){
+
+        visited[node] = VI(n,0);
+
+
+    }
+
+
+  
 }
 int main()
 {
@@ -76,8 +140,8 @@ int main()
     cin >> t;
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
-        solve();
         //if(it == 2) return 0;
+        solve();
     }
     return 0;
 }

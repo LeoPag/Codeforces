@@ -45,7 +45,6 @@ double eps = 1e-12;
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
-#define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -68,6 +67,25 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+    int n; cin >> n;
+    VL a(n);
+    VL b(n);
+    f(0,i,n) {
+        cin >> a[i];
+        b[i] = a[i];
+    }
+    sort(b);
+
+    f(0,i,n){
+        if((a[i]%2) == (b[i]%2)) continue;
+        else{
+            print("NO");
+            return;
+        }
+    }
+
+    print("YES");
+
 }
 int main()
 {
@@ -77,7 +95,6 @@ int main()
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
         solve();
-        //if(it == 2) return 0;
     }
     return 0;
 }

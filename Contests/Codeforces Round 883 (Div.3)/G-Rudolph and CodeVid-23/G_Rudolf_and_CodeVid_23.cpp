@@ -45,7 +45,7 @@ double eps = 1e-12;
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
-#define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
+#define print_vec(vec) f(0,i,vec.size()) cout << vec[i] << " "; cout << endl
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -65,19 +65,93 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+typedef vector<string> VS;
+typedef set<int> SI;
+
+
+int binary_to_dec(string s){
+    int n  = s.size();
+    int dec = 0;
+    f(0,i,n){
+        if(s[i] == '1') dec += pow(2,n-i-1);
+    }
+    return dec;
+}
+int INF = 10000000;
+int find_min(VI& distances, VI& visited){
+    int min_dist = INF;
+    int min_idx = -1;
+    for(int i = 0; i < distances.size(); i++){
+        if((visited[i] == 0) & (distances[i] < min_dist)){
+            min_dist = distances[i];
+            min_idx = i;
+        }
+    }
+    return min_idx;
+}
+
 // SOLVE
 void solve(){
 
+    int n,m; cin >> n >> m;
+
+    VVPI adj_list(pow(2,n));
+
+    string start_state; cin >> start_state;
+    int start_int = binary_to_dec(start_state);
+    
+    VS heals;
+    VS side_effects;
+    VI days;
+
+    f(0,i,m){
+        int d; cin >> d;
+        days.push_back(d);
+        string h; cin >> h;
+        heals.push_back(h);
+        string se; cin >> se;
+        side_effects.push_back(se);
+    }
+
+    f(0,i,pow(2,n)){
+        f(0,j,m){
+            int res = 0 & (~binary_to_dec(heals[j]));
+            int end_state = (i & (~binary_to_dec(heals[j]))) | binary_to_dec(side_effects[j]);
+            adj_list[i].push_back(make_pair(end_state, days[j]));
+        }
+    }
+
+    VI distances(pow(2,n), INF);
+    VI visited(pow(2,n), 0);
+
+    distances[start_int] = 0;
+
+    while (true){
+
+        int min_idx = find_min(distances, visited);
+        if(min_idx == -1) break;
+
+        visited[min_idx] = 1;
+
+        for(auto it = adj_list[min_idx].begin(); it != adj_list[min_idx].end(); it ++){
+
+            int end = it->first;
+            distances[end] = min(distances[end], distances[min_idx] + it->second);
+        }
+
+    }
+
+    if(distances[0] != INF) print(distances[0]);
+    else print(-1);
 }
-int main()
-{
+
+int main(){
     fast_cin();
     ll t;
     cin >> t;
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
         solve();
-        //if(it == 2) return 0;
     }
     return 0;
 }

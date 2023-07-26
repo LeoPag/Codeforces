@@ -30,11 +30,10 @@ typedef pair<double,double> PD;
 typedef vector<ll> VL;
 typedef vector<int> VI;
 typedef vector<vector<int> > VVI;
-typedef vector<PI> VPI;
-typedef vector<VPI> VVPI;
 typedef vector<vector<ll> > VVL;
 typedef vector<vector<PL> > VVPL;
 typedef vector<PL> VPL;
+typedef vector<PI> VPI;
 ll MOD = 998244353;
 double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -45,7 +44,7 @@ double eps = 1e-12;
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
-#define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
+#define print_vec(vec) f(0,i,vec.size()) cout << vec[i] << " "; cout << endl
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -68,16 +67,68 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+    int n; cin >> n;
+    VI freq_1(10,0);
+
+    VI a(n);
+    f(0,i,n) {
+        cin >> a[i];
+        freq_1[a[i]] += 1;
+    }
+
+    VI freq_2(10,0);
+    int object_type = -1;
+    while (object_type == -1){
+        cout << "- " << 0 << endl;
+        cout << endl;
+        cout.flush();
+
+        freq_2 = VI(10,0);
+        f(0,i,n) {
+            cin >> a[i];
+            freq_2[a[i]] += 1;
+        }
+        f(0,j,10){
+            if(freq_2[j] > freq_1[j]) object_type = j;
+        }
+    }
+
+    cout << "- " << n - freq_2[object_type] << " ";
+
+    f(0,i,n){
+        if(a[i] != object_type) cout << i + 1 << " ";
+    }
+    cout << endl;
+    cout.flush();
+    cout << endl;
+
+    int ans = -1;
+
+    while(ans == -1){
+        VI b(freq_2[object_type],0);
+        f(0,i,freq_2[object_type]) {
+            cin >> b[i];
+            if(b[i] != object_type) ans = i+1;
+        }
+        if(ans != -1) break;
+        cout << "- " << 0 << endl;
+        cout.flush();
+        cout << endl;
+    }
+
+    cout << "! " << ans << endl;
+    cout.flush();
+    cout << endl;
+    cout << endl;
 }
-int main()
-{
+
+int main(){
     fast_cin();
     ll t;
     cin >> t;
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
         solve();
-        //if(it == 2) return 0;
     }
     return 0;
 }
