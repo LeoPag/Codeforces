@@ -6,3 +6,4 @@
 |  B | Binary Cafe              | Combinatorics, Math                     |
 |  C | Ski Resort        | Combinatorics, Two Pointers                    |
 |  D | Wooden Toy Festival        | Binary Search, Greedy, Sortings                   |
+|  E | Character Blocking       | Hashing, Implementation                 |
