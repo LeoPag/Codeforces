@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Morning Sandwich            | Math                        |
 |  B | Monsters              | Greedy, Math          |
-|  C | Strong Password           | Dynamic Programming, Greedy         |
+|  C | Binary String Copying          | Brute Force, Hashing        |
