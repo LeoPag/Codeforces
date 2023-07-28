@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Forbidden Integer            | Math                        |
+|  A | Morning Sandwich            | Math                        |
 |  B | Come Together              | Geometry, Math          |
 |  C | Strong Password           | Dynamic Programming, Greedy         |
