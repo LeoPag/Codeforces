@@ -67,12 +67,64 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+typedef map<PI, bool> MPB;
+
 // SOLVE
 void solve(){
 
+    int n; cin >> n;
+    int m; cin >> m;
+
+    string s; cin >> s;
+
+    VI prefix(n,0);
+    VI suffix(n,0);
+
+    VPI indexes;
+
+    f(0,i,m){
+        int l,r; cin >> l >> r;
+        indexes.push_back(make_pair(l,r));
+    }
+
+
+    int pref = 0;
+
+    f_rev(n-1,i,-1){
+        if(s[i] == '0') pref += 1;
+        else pref = 0;
+        prefix[i] = pref;
+    }
+
+    int suff  = 0;
+
+    f(0,i,n){
+
+        if(s[i] == '1') suff += 1;
+        else suff = 0;
+        suffix[i] = suff;
+    }
+
+    MPB store;
+
+    f(0,i,m){
+        int l = indexes[i].first;
+        int r = indexes[i].second;
+
+        int left_most = l + prefix[l-1];
+        int right_most = r - suffix[r-1];
+        if(right_most < left_most) {
+            right_most = 0;
+            left_most = 0;
+        }
+        store[make_pair(left_most, right_most)] = 1;
+    }
+
+    print(store.size());
+            
 }
-int main()
-{
+
+int main(){
     fast_cin();
     ll t;
     cin >> t;

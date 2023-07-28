@@ -29,6 +29,7 @@ typedef pair<ll,ll> PL;
 typedef pair<double,double> PD;
 typedef vector<ll> VL;
 typedef vector<int> VI;
+typedef vector<char> VC;
 typedef vector<vector<int> > VVI;
 typedef vector<PI> VPI;
 typedef vector<VPI> VVPI;
@@ -40,14 +41,12 @@ double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define sort(v) sort(v.begin(),v.end())
 #define f(start,i,end) for(int i = start; i < end; i++)
-#define f_rev(start,i,end) for(int i = start; i > end; i--)
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
 #define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
-#define print_pair(p) cout << p.first << " " << p.second << endl
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -70,6 +69,50 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
 
+    int n; cin >> n;
+    VC c(n);
+    int open = 0;
+    int closed = 0;
+    f(0,i,n){
+        cin >> c[i];
+        if(c[i] == '(') open += 1;
+        else closed += 1;
+    } 
+
+    if(open != closed){
+        print(-1);
+        return;
+    }
+
+    int diff = 0;
+    int idx_2 = -1;
+    int curr = 0;
+    int cols = 1;
+
+    VI ans(n); 
+    ans[0] = 1;
+    
+    f(0,i,n){
+
+        if(c[i] == c[curr]) diff += 1;
+        else diff -= 1;
+
+        if(diff < 0){
+            diff = 1;
+            cols = 2;
+            if (idx_2 == -1) {
+                idx_2 = i;
+                ans[idx_2] = 2;
+            }
+            swap(curr, idx_2);
+        }
+
+        ans[i] = ans[curr];
+
+    }
+
+    print(cols);
+    print_vec(ans);
 }
 int main()
 {

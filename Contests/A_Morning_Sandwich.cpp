@@ -40,14 +40,12 @@ double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define sort(v) sort(v.begin(),v.end())
 #define f(start,i,end) for(int i = start; i < end; i++)
-#define f_rev(start,i,end) for(int i = start; i > end; i--)
 #define lower(v,val) (lower_bound(v.begin(), v.end(), val) - v.begin())
 #define upper(v,val) (upper_bound(v.begin(), v.end(), val) - v.begin())
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
 #define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
-#define print_pair(p) cout << p.first << " " << p.second << endl
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
     ll ret = 1;
@@ -69,6 +67,11 @@ ll modDivide(ll a, ll b){
 
 // SOLVE
 void solve(){
+
+    int b,c,h; cin >> b >> c >> h;
+    if(b > c+h) print((c+h)*2 + 1);
+    if(b == c+h) print(2*b-1);
+    if(b < c+h) print(2*b-1);
 
 }
 int main()

@@ -67,19 +67,77 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+
+VI a;
+VI cols;
+int n;
 // SOLVE
+
+void propagate(int start, int power){
+    if(start == 0) return;
+    if(start == n+1) return;
+    if(cols[start] == 1) return;
+    cols[start] = 1;
+    if(power == 0) return;
+    if(power == 2){
+        a[start] -= 2;
+        propagate(start-1, a[start-1]);
+        propagate(start+1, a[start+1]);
+    }
+
+    if(power == 1){
+        a[start] -= 1;
+        if(cols[start-1] == 0)propagate(start-1, a[start-1]);
+        else propagate(start+1, a[start+1]);
+    }
+    
+}
 void solve(){
 
+    cin >> n;
+    a = VI(n+2,0);
+    cols = VI(n+2,0);
+
+    f(1,i,n+1) cin >> a[i];
+    cols[0] = 1;
+    cols[n+1] = 1;
+
+    int ans = 0;
+
+    f(1,i,n+1){
+        if(a[i] == 2){
+            if(cols[i] == 0) ans += 1;
+            propagate(i,2);
+        }
+    }
+    f(1,i,n+1){
+
+        if(a[i] == 1){
+            if((cols[i+1] == 1) or (a[i+1] == 0)){
+                ans += 1;
+                propagate(i,1);
+            }
+        }
+    }
+    f(1,i,n+1){
+        if(cols[i] == 0) ans += 1;
+    }
+    print(ans);
 }
 int main()
 {
     fast_cin();
+
+    solve();
+
+    /*
     ll t;
     cin >> t;
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
         solve();
         //if(it == 2) return 0;
-    }
+    }*/
+
     return 0;
 }
