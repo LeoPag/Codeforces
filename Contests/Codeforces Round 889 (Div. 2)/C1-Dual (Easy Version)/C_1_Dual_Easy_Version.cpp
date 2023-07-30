@@ -80,14 +80,14 @@ void solve(){
     f(0,i,n) {
         cin >> a[i];
         if(a[i] > max){
-            max_i = i; 
+            max_i = i;
             max = a[i];
         }
 
         if(a[i] < min){
             min_i = i;
             min = a[i];
-        } 
+        }
     }
 
     auto a2 = a;
@@ -97,7 +97,7 @@ void solve(){
 
     bool bool1 = false;
     bool bool2 = false;
-    
+
     if(a[max_i] > 0){
         bool1 = true;
         f(1,i,n){
@@ -106,7 +106,7 @@ void solve(){
                 pairs.push_back(make_pair(i+1,max_i+1));
                 if(a[i] > a[max_i]) max_i  = i;
            }
-           
+
         }
     }
 
@@ -120,7 +120,7 @@ void solve(){
            }
         }
     }
-  
+
     if((bool1 == false) & (bool2 == false)){
         print(0);
         return;
@@ -153,12 +153,6 @@ void solve(){
         }
     }
      }
-
-
-
-
-   
-    
 }
 int main()
 {

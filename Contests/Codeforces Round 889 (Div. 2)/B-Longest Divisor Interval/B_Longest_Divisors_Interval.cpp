@@ -84,9 +84,6 @@ void solve(){
     }
 
     print(ct);
-
-   
-
 }
 int main()
 {
