@@ -1,7 +1,7 @@
 #pragma GCC optimize("Ofast")
 #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 #pragma GCC optimize("unroll-loops")
-
+ 
 #include <complex>
 #include <queue>
 #include <set>
@@ -20,9 +20,9 @@
 #include <iomanip>
 #include <fstream>
 #include <bitset>
-
+ 
 using namespace std;
-
+ 
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> PI;
@@ -67,14 +67,43 @@ ll modDivide(ll a, ll b){
     ll inverse = get_mod_inverse(b);
     return a % MOD * inverse % MOD;
 }
-
+ 
 // SOLVE
 void solve(){
-
+ 
+    int n; cin >> n;
+    const int N = 2e5 + 10;
+ 
+    VI a(N,0);
+    f(0,i,n) cin >> a[i];
+    bitset<N> dp;
+ 
+ 
+    dp[0] = 1;
+    ll sum = 0;
+    ll ans = 0;
+    ll unlocked = 1;
+ 
+    f(0,i,n){
+ 
+        if(i > unlocked - 1) break;
+        unlocked += a[i];
+ 
+        dp |= (dp >> i) << (i + a[i]);
+    }
+ 
+    f(0,i,2*n){
+        sum += a[i];
+        if(dp[i]) ans = max(ans, sum - i);
+    }
+ 
+    print(ans);
+ 
 }
 int main()
-{
-    fast_cin();
+{   
+    solve();
+    /*fast_cin();
     ll t;
     cin >> t;
     for(int it=1;it<=t;it++) {
@@ -82,5 +111,5 @@ int main()
         solve();
         //if(it == 2) return 0;
     }
-    return 0;
+    return 0;*/
 }
