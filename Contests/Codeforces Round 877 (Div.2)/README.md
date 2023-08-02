@@ -4,3 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Blackboard List                | Math                        |
 |  B | Minimize Permutation Subarrays | Math, Greedy                |
+|  C | No Prime Differences | Math, Number Theory              |
