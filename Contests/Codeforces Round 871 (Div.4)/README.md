@@ -6,6 +6,6 @@
 |  B | Blank Space              |Implementation                       |
 |  C | Mr Perfectly Fine       | Greedy,Bitmasks                        |
 |  D | Gold Rush        | Brute Force                       |
-|  E | Round Dance        | DFS, Graphs                       |
+|  E | The Lakes       | DFS, Graphs                       |
 |  F | Ira and Flamenco        | Combinatorics, Math, Sortings, Two Pointers|
 |  G | Ksyusha and Chinchilla       | DFS, Trees, Greedy|
