@@ -3,7 +3,7 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Love Story            | Strings                        |
-|  B | Restore the Weather              |Greedy, Sortings                        |
+|  B | Blank Space              |Implementation                       |
 |  C | Vlad Building Beautiful Array        | Greedy, Math                        |
 |  D | Flipper        | Greedy, Brute Force                       |
 |  E | Round Dance        | DFS, Graphs                       |
