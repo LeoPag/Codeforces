@@ -8,4 +8,4 @@
 |  D | Gold Rush        | Brute Force                       |
 |  E | The Lakes       | DFS, Graphs                       |
 |  F | Forever Winter        | Graphs,Math|
-|  G | Ksyusha and Chinchilla       | DFS, Trees, Greedy|
+|  G | Hits Different      | Data Structures, Math|
