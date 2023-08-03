@@ -7,5 +7,5 @@
 |  C | Mr Perfectly Fine       | Greedy,Bitmasks                        |
 |  D | Gold Rush        | Brute Force                       |
 |  E | The Lakes       | DFS, Graphs                       |
-|  F | Ira and Flamenco        | Combinatorics, Math, Sortings, Two Pointers|
+|  F | Forever Winter        | Graphs,Math|
 |  G | Ksyusha and Chinchilla       | DFS, Trees, Greedy|
