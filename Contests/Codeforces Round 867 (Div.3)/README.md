@@ -5,4 +5,4 @@
 |  A | TubeTube Feed            | Brute Force                       |
 |  B | Karina and Array             |Greedy,Math, Sortings                        |
 |  C | Bun Lover       | Math                        |
-|  D | Flipper        | Greedy, Brute Force                       |
+|  D | Super Permutation       | Math                    |
