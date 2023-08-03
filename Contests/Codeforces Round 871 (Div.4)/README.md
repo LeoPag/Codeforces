@@ -4,7 +4,7 @@
 |---------|---------------------------|-----------------------------|
 |  A | Love Story            | Strings                        |
 |  B | Blank Space              |Implementation                       |
-|  C | Vlad Building Beautiful Array        | Greedy, Math                        |
+|  C | Mr Perfectly Fine       | Greedy,Bitmasks                        |
 |  D | Flipper        | Greedy, Brute Force                       |
 |  E | Round Dance        | DFS, Graphs                       |
 |  F | Ira and Flamenco        | Combinatorics, Math, Sortings, Two Pointers|
