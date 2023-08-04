@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Love Story            | Strings                        |
+|  A | Trust Nobody          | Brute Force                       |
 |  B | Blank Space              |Implementation                       |
 |  C | Mr Perfectly Fine       | Greedy,Bitmasks                        |
 |  D | Gold Rush        | Brute Force                       |
