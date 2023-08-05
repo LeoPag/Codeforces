@@ -71,7 +71,7 @@ ll modDivide(ll a, ll b){
 // SOLVE
 void solve(){
     int n; cin >> n;
-    
+
     VL a(n);
 
     ll s = 0;
@@ -94,17 +94,12 @@ void solve(){
         forced = n - s%n;
     }
 
-    //print(forced);
-
     if(forced > n-ones){
         print("NO");
         return;
     }
 
     print("YES");
-
-    //print(forced);
-
 
 }
 int main()
