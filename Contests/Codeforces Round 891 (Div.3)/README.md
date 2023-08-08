@@ -2,5 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Tales of a Sort              | Implementation                       |
-|  B | Good Arrays                |Math                        |
+|  A | Array Coloring            | Math                      |
+|  B | Maximum Rounding               |Greedy, Implementation, Math                      |
+|  C | Assembly via Minimums              |Greedy, Sortings               |
+|  D | Strong Vertices               |Math, Trees                      |
