@@ -5,4 +5,4 @@
 |  A | Array Coloring            | Math                      |
 |  B | Maximum Rounding               |Greedy, Implementation, Math                      |
 |  C | Assembly via Minimums              |Greedy, Sortings               |
-|  B | Maximum Rounding               |Greedy, Implementation, Math                      |
+|  D | Strong Vertices               |Math, Trees                      |
