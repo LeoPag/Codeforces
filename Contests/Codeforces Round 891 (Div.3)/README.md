@@ -2,5 +2,5 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Tales of a Sort              | Implementation                       |
+|  A | Array Coloring            | Math                      |
 |  B | Good Arrays                |Math                        |
