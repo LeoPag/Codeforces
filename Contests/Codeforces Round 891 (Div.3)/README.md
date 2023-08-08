@@ -3,4 +3,4 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Array Coloring            | Math                      |
-|  B | Good Arrays                |Math                        |
+|  B | Maximum Rounding               |Greedy, Implementation, Math                      |
