@@ -96,7 +96,7 @@ void solve(){
 
     sol[*s.rbegin()] = final;
     ll right_seg = 0;
-    
+
     for(auto it = s.rbegin(); it != s.rend(); it++){
         if(it ==  s.rbegin()){
             last_i = *it;
@@ -117,12 +117,6 @@ void solve(){
     }
 
     cout << endl;
-
-
-
-
-
-
 }
 int main()
 {
