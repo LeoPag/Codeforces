@@ -68,8 +68,82 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+
+VL dp;
+
+ll compute_fours(ll n){
+    ll max_pow = 1;
+    ll idx = 0;
+    ll fours = 0;
+    while(max_pow * 10 <= n) {
+        max_pow *= 10;
+        idx += 1;
+    }
+
+    while(idx >= 0){
+        ll first_dig = n / max_pow;
+        n = n % max_pow;
+        if(first_dig == 4){
+            fours += 4 * dp[idx] + n + 1;
+            return fours;
+        }
+        else if(first_dig < 4){
+            fours += first_dig * dp[idx];
+        }
+        else{
+            fours += (first_dig-1)*dp[idx] + max_pow;
+        }
+        max_pow = max_pow / 10;
+        idx-=1;
+    }
+    return fours;
+}
+
+bool has_four(ll n){
+    while (n>1){
+        ll rem = n%10;
+        if(rem == 4) return true;
+        n = n/10;
+    }
+    return false;
+}
+
+
 // SOLVE
 void solve(){
+
+  ll k; cin >> k;
+
+
+  dp = VL(20,0);
+  dp[1] = 1;
+
+  f(2,i,14){
+    dp[i] = pow(10,i-1) + 9 * dp[i-1];
+  }
+
+  ll low = k;
+  ll high = pow(10,18);
+
+  while(low <= high){
+    ll mid = (low + high) / 2;
+    ll q = compute_fours(mid);
+    if(k + q == mid){
+        if(has_four(mid)){
+            high = mid - 1;
+        }
+        else{
+            print(mid);
+            return;
+        }
+    }
+    else if(k + q > mid){
+        low = mid + 1;
+    }
+    else if(k + q < mid){
+        high = mid - 1;
+    }
+  }
 
 }
 int main()
@@ -80,7 +154,7 @@ int main()
     for(int it=1;it<=t;it++) {
         //cout<< "TESTCASE:  " <<  it << endl;
         solve();
-        //if(it == 2) return 0;
+        //if(it == 1) return 0;
     }
     return 0;
 }

@@ -47,7 +47,7 @@ double eps = 1e-12;
 #define max_arr(v) *max_element(v.begin(), v.end())
 #define min_arr(v) *min_element(v.begin(), v.end())
 #define print(var) cout << var << endl
-#define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl
+#define print_vec(v) for (auto it = v.begin(); it != v.end(); it++) cout << *it << " "; cout << endl;
 #define print_pair(p) cout << p.first << " " << p.second << endl
 // MODULAR DIVISION
 ll get_pow_mod(ll n, ll x){
@@ -68,9 +68,50 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
+ll fibonacci(int n){
+    if(n == 0) return 1;
+    if(n == 1) return 1;
+
+    n-=1;
+    ll f1 = 1;
+    ll f2 = 1;
+    ll f3 = 2;
+    
+    while(n--){
+        f3 = f1 + f2;
+        f1 = f2;
+        f2 = f3;
+    }
+
+    return f3;
+}
+
+void divide_conquer(int n, ll x,ll y, ll height, ll width){
+    if(n == 1){
+        print("YES");
+        return;
+    }
+
+    ll new_x = min(y,width-y+1);
+    if(new_x > width - height){
+        print("NO");
+        return;
+    }
+    else{
+        divide_conquer(n-1,new_x,x,width-height,height);
+    }
+}
+
 // SOLVE
 void solve(){
+  
+    int n; cin >> n;
+    ll x,y; cin >> x >> y;
 
+    ll height = fibonacci(n);
+    ll width = fibonacci(n+1);
+
+    divide_conquer(n,x,y,height,width);
 }
 int main()
 {
