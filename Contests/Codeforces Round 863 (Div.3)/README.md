@@ -4,3 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Insert Digit         | Greedy, Math                     |
 |  B | Conveyor Belts            |Math                       |
+|  C | Restore the Array           |Greedy                      |
