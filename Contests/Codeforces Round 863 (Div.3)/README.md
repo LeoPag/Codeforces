@@ -2,5 +2,5 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Ian Visits Mary          | Geometry, Number Theory                       |
+|  A | Insert Digit         | Greedy, Math                     |
 |  B | Grid Reconstruction             |Greedy                       |
