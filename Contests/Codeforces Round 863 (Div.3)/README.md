@@ -6,3 +6,4 @@
 |  B | Conveyor Belts            |Math                       |
 |  C | Restore the Array           |Greedy                      |
 |  D | Umka and a Long Flight          |Math                      |
+|  E | Living Sequence          |Binary Search, Math, Number Theory                      |
