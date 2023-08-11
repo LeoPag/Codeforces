@@ -2,5 +2,8 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Ian Visits Mary          | Geometry, Number Theory                       |
-|  B | Grid Reconstruction             |Greedy                       |
+|  A | Insert Digit         | Greedy, Math                     |
+|  B | Conveyor Belts            |Math                       |
+|  C | Restore the Array           |Greedy                      |
+|  D | Umka and a Long Flight          |Math                      |
+|  E | Living Sequence          |Binary Search, Math, Number Theory                      |
