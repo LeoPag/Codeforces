@@ -3,5 +3,5 @@
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
 |  A | United We Stand            | Math                      |
-|  B | Points on Plane            | Binary Search, Greedy, Math                       |
+|  B | Olya and Game with Arrays            | Greedy, Math ,Sortings                      |
 |  C | Sum on Subarrays            | Greedy, Math                       |
