@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | United We Stand            | Math                      |
 |  B | Olya and Game with Arrays            | Greedy, Math ,Sortings                      |
-|  C | Sum on Subarrays            | Greedy, Math                       |
+|  C | Another Permutation Problem            | Brute Force,Greedy, Math                       |
