@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Garland             | Implementation                        |
-|  B | Points on Plane            | Binary Search, Greedy, Math                       |
-|  C | Sum on Subarrays            | Greedy, Math                       |
+|  A | United We Stand            | Math                      |
+|  B | Olya and Game with Arrays            | Greedy, Math,Sortings                      |
+|  C | Another Permutation Problem            | Brute Force, Greedy, Math                       |
