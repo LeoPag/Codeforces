@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Morning Sandwich            | Math                        |
-|  B | Monsters              | Greedy, Math          |
+|  A | Not a Substring            | Strings                        |
+|  B | Fancy Coins              | Greedy, Math          |
 |  C | Binary String Copying          | Brute Force, Hashing        |
-|  D | Array Painting         | Brute Force, Greedy        |
+
