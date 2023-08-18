@@ -3,5 +3,5 @@
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
 |  A | Typical Interview Problem             | Implementation, Brute Force, Strings                        |
-|  B | Points on Plane            | Binary Search, Greedy, Math                       |
+|  B | Asterisk-Minor Template            | Implementation, Strings                     |
 |  C | Sum on Subarrays            | Greedy, Math                       |
