@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Typical Interview Problem             | Implementation, Brute Force, Strings                        |
 |  B | Asterisk-Minor Template            | Implementation, Strings                     |
-|  C | Sum on Subarrays            | Greedy, Math                       |
+|  C | Maximum Set            | Math, Binary Search                       |
