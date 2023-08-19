@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Two Towers            | Brute Force, Implementation                        |
 |  B | Ideal Point           | Brute Force, Geometry, Greedy,  |
-|  C | Sum on Subarrays            | Greedy, Math                       |
+|  C | Tea Tasting            | Binary Search, Data Structures                     |
