@@ -2,6 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Garland             | Implementation                        |
-|  B | Points on Plane            | Binary Search, Greedy, Math                       |
-|  C | Sum on Subarrays            | Greedy, Math                       |
+|  A | Two Towers            | Brute Force, Implementation                        |
+|  B | Ideal Point           | Brute Force, Geometry, Greedy,  |
+|  C | Tea Tasting            | Binary Search, Prefix Sums, Data Structures                     |
+|  D | Triangle Coloring            | Math, Combinatorics, Graphs                    |
