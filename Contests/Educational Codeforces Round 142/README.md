@@ -3,5 +3,5 @@
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
 |  A | Gaming Forces            | Greedy                      |
-|  B | Points on Plane            | Binary Search, Greedy, Math                       |
+|  B | Stand-up Comedian            | Greedy, Math                       |
 
