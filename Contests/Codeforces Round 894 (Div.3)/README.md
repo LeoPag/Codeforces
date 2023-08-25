@@ -4,4 +4,4 @@
 |---------|---------------------------|-----------------------------|
 |  A | Gift Carpet             | Greedy, Implamentation, Strings                      |
 |  B | Sequence Game           | Constructive Algorithms                      |
-|  C | Yet Another Permutation Problem           | Math, Number Theory                       |
+|  C | Flower City Fence          | Implementation                      |
