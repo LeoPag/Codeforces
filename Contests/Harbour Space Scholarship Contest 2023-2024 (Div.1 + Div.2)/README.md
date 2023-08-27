@@ -3,6 +3,6 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Increasing and Decreasing           | Math, Constructive Algorithms                       |
-|  B | Fancy Coins              | Greedy, Math          |
+|  B | Swap and Reverse             | Greedy, Sortings          |
 |  C | Game on Permutation          | Games, Greedy       |
 
