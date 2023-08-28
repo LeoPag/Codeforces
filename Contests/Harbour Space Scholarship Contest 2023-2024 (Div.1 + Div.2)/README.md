@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Not a Substring            | Strings                        |
-|  B | Fancy Coins              | Greedy, Math          |
-|  C | Game on Permutation          | Games, Greedy       |
+|  A | Increasing and Decreasing           | Math, Constructive Algorithms                       |
+|  B | Swap and Reverse             | Greedy, Sortings          |
+|  C | Divisor Chain         | Bitmask, Math, Number Theory, Constructive Algorithms      |
 
