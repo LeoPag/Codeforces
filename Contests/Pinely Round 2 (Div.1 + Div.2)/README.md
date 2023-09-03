@@ -4,5 +4,5 @@
 |---------|---------------------------|-----------------------------|
 |  A | Channel          | Greedy, Implementation                     |
 |  B | Split Sort            | Greedy, Math, Sortings         |
-|  C | Mex Repetition        | Implementation, Math     |
+|  C | MEX Repetition        | Implementation, Math     |
 
