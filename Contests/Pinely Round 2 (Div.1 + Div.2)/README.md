@@ -3,6 +3,6 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Channel          | Greedy, Implementation                     |
-|  B | Swap and Reverse             | Greedy, Sortings          |
+|  B | Split Sort            | Greedy, Math, Sortings         |
 |  C | Divisor Chain         | Bitmask, Math, Number Theory, Constructive Algorithms      |
 
