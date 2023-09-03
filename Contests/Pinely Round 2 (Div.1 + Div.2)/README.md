@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Increasing and Decreasing           | Math, Constructive Algorithms                       |
+|  A | Channel          | Greedy, Implementation                     |
 |  B | Swap and Reverse             | Greedy, Sortings          |
 |  C | Divisor Chain         | Bitmask, Math, Number Theory, Constructive Algorithms      |
 
