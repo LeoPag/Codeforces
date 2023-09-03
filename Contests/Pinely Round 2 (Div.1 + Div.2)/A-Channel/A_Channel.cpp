@@ -94,8 +94,6 @@ void solve(){
         }
     }
 
-
-
     if(t >= n){
         print("MAYBE");
     }
