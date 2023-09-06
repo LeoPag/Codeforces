@@ -4,5 +4,5 @@
 |---------|---------------------------|-----------------------------|
 |  A | Prime Deletion           | Math                        |
 |  B | Two Binary Strings             | Greedy          |
-|  C | Game on Permutation          | Games, Greedy       |
+|  C | Queries for the Array         |Data Structures       |
 
