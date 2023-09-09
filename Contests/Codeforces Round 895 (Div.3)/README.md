@@ -3,6 +3,6 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Two Vessels           | Greedy,Math                        |
-|  B | he Corridor or There and Back Again            | Greedy          |
+|  B | The Corridor or There and Back Again            | Greedy          |
 |  C | Queries for the Array         |Data Structures       |
 
