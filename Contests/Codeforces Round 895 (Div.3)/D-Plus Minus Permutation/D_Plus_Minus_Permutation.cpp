@@ -70,10 +70,22 @@ ll modDivide(ll a, ll b){
 
 // SOLVE
 void solve(){
-    double a,b,c; cin >> a >> b >> c;
-
-    print(ceil(abs(a-b)/2 / c));
     
+    ll n,x,y; cin >> n >> x >> y;
+    ll mcm = (x*y)/gcd(x,y);
+
+    ll pxs = n/x;
+    ll pys = n/y;
+
+    ll common = n/mcm;
+
+    ll min_pos = n - (pxs - common);
+    ll max_neg = pys - common;
+
+    ll pos_contribution = (n*(n+1)) / 2 - ((min_pos) * (min_pos+1) / 2);
+    ll neg_contribution = (max_neg * (max_neg+1))/2;
+
+    print(pos_contribution-neg_contribution);
 
 }
 int main()
