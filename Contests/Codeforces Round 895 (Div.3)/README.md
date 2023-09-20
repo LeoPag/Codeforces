@@ -7,3 +7,4 @@
 |  C | Non-coprime Split        |Math, Number Theory       |
 |  D | Plus Minus Permutation        |Math      |
 |  E | Data Structures Fan       |Bitmasks, Data Structures      |
+|  F | Selling a Menagerie       |DFS, Graphs     |
