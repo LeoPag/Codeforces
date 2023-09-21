@@ -4,5 +4,5 @@
 |---------|---------------------------|-----------------------------|
 |  A | green_gold_dog, array and permutation           | Constructive algorithms, Sortings                        |
 |  B | XOR Palindromes            | Bitmasks         |
-|  C | Non-coprime Split        |Math, Number Theory       |
+|  C | Salyg1n and the MEX Game        |Games, Greedy, Interactive      |
 
