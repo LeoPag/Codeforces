@@ -2,8 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Two Vessels           | Greedy,Math                        |
-|  B | The Corridor or There and Back Again            | Greedy          |
-|  C | Non-coprime Split        |Math, Number Theory       |
-|  D | Plus Minus Permutation        |Math      |
-|  E | Data Structures Fan       |Bitmasks, Data Structures      |
+|  A | Make it Zero           | Bit Manipulation, Constructive Algorithm                      |
+|  B | 2D Traveling           | Math, Geometry, Shortest Path, Greedy          |
+|  C | Fill in the Matrix       |Math, Number Theory,  Constructive Algorithm        |
