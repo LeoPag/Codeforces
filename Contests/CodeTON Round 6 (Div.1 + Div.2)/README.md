@@ -2,6 +2,6 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Tenzing and Tzondu              | Math, Games                        |
+|  A | MEXanized Array              | Math                       |
 
 
