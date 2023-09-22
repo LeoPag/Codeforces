@@ -2,8 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Two Vessels           | Greedy,Math                        |
-|  B | The Corridor or There and Back Again            | Greedy          |
-|  C | Non-coprime Split        |Math, Number Theory       |
-|  D | Plus Minus Permutation        |Math      |
-|  E | Data Structures Fan       |Bitmasks, Data Structures      |
+|  A | green_gold_dog, array and permutation           | Constructive algorithms, Sortings                        |
+|  B | XOR Palindromes            | Bitmasks         |
+|  C | Salyg1n and the MEX Game        |Games, Greedy, Interactive      |
+
