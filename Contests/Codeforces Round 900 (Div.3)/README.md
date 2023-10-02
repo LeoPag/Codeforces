@@ -4,7 +4,7 @@
 |---------|---------------------------|-----------------------------|
 |  A | How Much Does Daytona Cost?         | Greedy                  |
 |  B | Aleksa and Stack         | Constructive Algorithms, Math              |
-|  C | Target Practice         | Implementation, Math           |
+|  C | Vasilije in Cacak         | Math           |
 
 
 
