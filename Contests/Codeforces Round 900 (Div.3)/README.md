@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Short Sort         | Brute Force                       |
+|  A | How Much Does Daytona Cost?         | Greedy                  |
 |  B | Good Kid         | Brute Force, Greedy, Math              |
 |  C | Target Practice         | Implementation, Math           |
 
