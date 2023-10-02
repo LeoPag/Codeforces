@@ -3,7 +3,7 @@
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
 |  A | How Much Does Daytona Cost?         | Greedy                  |
-|  B | Good Kid         | Brute Force, Greedy, Math              |
+|  B | Aleksa and Stack         | Constructive Algorithms, Math              |
 |  C | Target Practice         | Implementation, Math           |
 
 
