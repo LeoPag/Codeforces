@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Prime Deletion           | Math                        |
+|  A | Rigged!           | Greedy                        |
 |  B | Two Binary Strings             | Greedy          |
 |  C | Queries for the Array         |Data Structures       |
 
