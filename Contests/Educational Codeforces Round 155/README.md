@@ -3,6 +3,6 @@
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
 |  A | Rigged!           | Greedy                        |
-|  B | Two Binary Strings             | Greedy          |
+|  B | Chips on the Board            | Greedy          |
 |  C | Queries for the Array         |Data Structures       |
 
