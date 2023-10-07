@@ -3,7 +3,7 @@
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
 |  A | Jellyfish and Undertale        | Brute Force, Greedy                  |
-|  B | Aleksa and Stack         | Constructive Algorithms, Math              |
+|  B | Jellyfish and Game        | Brute Force, Greedy              |
 |  C | Vasilije in Cacak         | Math           |
 
 
