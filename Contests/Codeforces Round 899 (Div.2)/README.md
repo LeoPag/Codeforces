@@ -4,7 +4,7 @@
 |---------|---------------------------|-----------------------------|
 |  A | Increasing Sequence        | Greedy                      |
 |  B | Sets and Union        | Brute Force, Greedy              |
-|  C | Target Practice         | Implementation, Math           |
+|  C | Card Game        |  Brute Force, Greedy              |
 
 
 
