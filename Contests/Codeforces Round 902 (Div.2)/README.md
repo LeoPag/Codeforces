@@ -4,7 +4,7 @@
 |---------|---------------------------|-----------------------------|
 |  A | Goals of Victory        | Math                  |
 |  B | Helmets in Night Light        | Greedy, Sortings             |
-|  C | Vasilije in Cacak         | Math           |
+|  C | Joyboard        | Math, Number Theory           |
 
 
 
