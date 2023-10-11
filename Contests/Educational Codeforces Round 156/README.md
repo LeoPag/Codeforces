@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques                          |
 |---------|---------------------------|-----------------------------|
-|  A | Rigged!           | Greedy                        |
+|  A | Sum of Three           | Math, Brute Force, Constructive Algorithms                        |
 |  B | Chips on the Board            | Greedy          |
 
 
