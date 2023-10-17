@@ -4,7 +4,7 @@
 |---------|---------------------------|-----------------------------|
 |  A | Don't Try to Count       | Brute Force                  |
 |  B | Three Threadlets      | Math            |
-|  C | Joyboard        | Math, Number Theory           |
+|  C | Perfect Square       | Brute Force, Implementation           |
 
 
 
