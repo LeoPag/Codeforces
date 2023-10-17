@@ -2,7 +2,7 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Goals of Victory        | Math                  |
+|  A | Don't Try to Count       | Brute Force                  |
 |  B | Helmets in Night Light        | Greedy, Sortings             |
 |  C | Joyboard        | Math, Number Theory           |
 
