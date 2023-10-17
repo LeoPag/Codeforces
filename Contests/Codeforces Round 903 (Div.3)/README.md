@@ -6,6 +6,7 @@
 |  B | Three Threadlets      | Math            |
 |  C | Perfect Square       | Brute Force, Implementation           |
 |  D | Divide and Equalize      | Math, Number Theory           |
+|  E | Block Sequence      | Dynamic Programming          |
 
 
 
