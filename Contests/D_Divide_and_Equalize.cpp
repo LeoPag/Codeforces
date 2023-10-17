@@ -68,27 +68,35 @@ ll modDivide(ll a, ll b){
     return a % MOD * inverse % MOD;
 }
 
-typedef vector<char> VC;
-typedef vector<VC> VVC;
+typedef map<int,int> MI;
 
 // SOLVE
 void solve(){
 
     int n; cin >> n;
-    
-    ll prod = 1;
+
+    MI divs;
+
     f(0,i,n){
-        ll ai; cin >> ai;
-        prod *= ai;
+        int ai; cin >> ai;
+        int curr = 2;
+        while(curr*curr <= ai){
+            while(ai % curr == 0){
+                divs[curr] += 1;
+                ai /= curr;
+            }
+            curr+=1;
+        }
+        if(ai > 1) divs[ai] += 1;
     }
 
-    double rad = pow(prod,1.0/n);
-    
-    ll cand1 = ceil(rad);
-    ll cand2 = floor(rad);
-
-    if((pow(cand1,n) == prod) or (pow(cand2,n) == prod)) print("YES");
-    else print("NO");
+    for(auto it = divs.begin(); it != divs.end(); it++){
+        if(it->second % n != 0){
+            print("NO");
+            return;
+        }
+    }
+    print("YES");
 }
 int main()
 {
