@@ -9,6 +9,7 @@
 |  E | Building an Aquarium         | Binary Search, Sortings        |
 |  F | Money Trees        | Greedy, Two Pointers       |
 |  G | ABBC or BACB       | Greedy       |
+|  H | Mad City      | Graphs, DFS, BFS, Shortest Paths, Games       |
 
 
 
