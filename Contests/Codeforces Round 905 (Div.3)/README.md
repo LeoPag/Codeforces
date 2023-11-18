@@ -2,11 +2,10 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Don't Try to Count       | Brute Force                  |
-|  B | Three Threadlets      | Math            |
-|  C | Perfect Square       | Brute Force, Implementation           |
-|  D | Divide and Equalize      | Math, Number Theory           |
-|  E | Block Sequence      | Dynamic Programming          |
+|  A | Morning     | Brute Force                  |
+|  B | Chemistry      | Math            |
+|  C | Raspberries    | Brute Force, Implementation           |
+|  D | In Love      | Math, Number Theory           |
 
 
 
