@@ -2,10 +2,10 @@
 
 |  Letter | Title                     | Topics and Techniques       |
 |---------|---------------------------|-----------------------------|
-|  A | Morning     | Brute Force                  |
-|  B | Chemistry      | Math            |
-|  C | Raspberries    | Brute Force, Implementation           |
-|  D | In Love      | Math, Number Theory           |
+|  A | Morning     |Math                |
+|  B | Chemistry      | Strings          |
+|  C | Raspberries    | Brute Force, Math          |
+|  D | In Love      | Data Structures, Greedy           |
 
 
 
